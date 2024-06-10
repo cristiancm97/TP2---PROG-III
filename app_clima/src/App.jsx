@@ -73,7 +73,7 @@ function App() {
         Weather App
       </Typography>
       <Box
-        sx={{display: "grid", gap: 2, alignItems:"center", alignContent:"center"}}
+        sx={{display: "grid", gap: 2}}
         component="form"
         autoComplete="off"
         onSubmit={onSubmit}
@@ -112,8 +112,8 @@ function App() {
             border:"1px solid #E2E8E4",
             borderRadius: "15px",
             backgroundColor:"#006C84",
-            //justifyItems: "center",  // Centra horizontalmente
-            alignItems: "center",    // Centra verticalmente
+            //justifyItems: "center",
+            alignItems: "center",
           }}
         >
           <Typography variant="h4" component="h2" sx={{justifyContent:"center", color:"#E2E8E4"}}>
