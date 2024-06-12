@@ -42,8 +42,24 @@ function App() {
           temp: data.current.temp_c,
           condition: data.current.condition.code,
           icon: data.current.condition.icon,
-          conditionText: data.current.condition.text,
+          conditionText: data.current.condition.text,       
         })
+
+        const busqueda = {
+          city: data.location.name,
+          country: data.location.country,
+          temp: data.current.temp_c,
+          conditionText: data.current.condition.text,
+        }
+        const busquedaJson = JSON.stringify(busqueda);
+
+        console.log(busquedaJson)
+
+        const responseBackend = await fetch ('http://localhost:3001/api/clima', {
+          method: 'POST',
+          body: busquedaJson
+        })
+
     } catch (error) {
       setError({
         error: true,
